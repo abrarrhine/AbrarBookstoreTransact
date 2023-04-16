@@ -6,14 +6,30 @@ ALTER TABLE category AUTO_INCREMENT = 1001;
 
 INSERT INTO `category` (`name`) VALUES ('Science'),('Engineering'),('Myth'),('Religion'),('Sports'),('Travel') ;
 
-INSERT INTO `book` (title, author, description, price, rating, is_public, is_featured, category_id) VALUES ('The Iliad', 'Homer', '', 699, 0, TRUE, FALSE, 1001);
-INSERT INTO `book` (title, author, description, price, rating, is_public, is_featured, category_id) VALUES ('The Brothers Karamazov', 'Fyodor Dostoyevski', '', 799, 0, TRUE, FALSE, 1001);
-INSERT INTO `book` (title, author, description, price, rating, is_public, is_featured, category_id) VALUES ('Little Dorrit', 'Charles Dickens', '', 599, 0, TRUE, FALSE, 1001);
-INSERT INTO `book` (title, author, description, price, rating, is_public, is_featured, category_id) VALUES ('Moby Dick', 'Herman Melville', '', 899, 0, TRUE, FALSE, 1001);
-INSERT INTO `book` (title, author, description, price, rating, is_public, is_featured, category_id) VALUES ('Hamlet', 'William Shakespeare', '', 799, 0, TRUE, FALSE, 1001);
+INSERT INTO `book` (title, author, description, price, rating, is_public, is_featured, category_id) VALUES ('The Universe in a Nutshell', 'Stephen Hawking', '', 2398, 0, TRUE, TRUE, 1001);
+INSERT INTO `book` (title, author, description, price, rating, is_public, is_featured, category_id) VALUES ('A Brief History of Time', 'Stephen Hawking', '', 7449, 0, TRUE, FALSE, 1001);
+INSERT INTO `book` (title, author, description, price, rating, is_public, is_featured, category_id) VALUES ('The Origin of Species', 'Charles Darwin', '', 9999, 0, TRUE, FALSE, 1001);
+INSERT INTO `book` (title, author, description, price, rating, is_public, is_featured, category_id) VALUES ('Introduction to Microbiology', 'Matthew Saltus', '', 3595, 0, TRUE, FALSE, 1001);
 INSERT INTO `book` (title, author, description, price, rating, is_public, is_featured, category_id) VALUES ('Combinatorics Ancient Modern', 'Robin Wilson', '', 2999, 0, TRUE, FALSE, 1002);
 INSERT INTO `book` (title, author, description, price, rating, is_public, is_featured, category_id) VALUES ('Java A Beginners Guide', 'Herbert Schildt', '', 9999, 0, TRUE, FALSE, 1002);
-INSERT INTO `book` (title, author, description, price, rating, is_public, is_featured, category_id) VALUES ('Automotive Mechanics', 'May & Simpson', '', 7449, 0, TRUE, FALSE, 1002);
-INSERT INTO `book` (title, author, description, price, rating, is_public, is_featured, category_id) VALUES ('The Aircraft Book', 'Jeff Walker', '', 17999, 0, TRUE, FALSE, 1002);
+INSERT INTO `book` (title, author, description, price, rating, is_public, is_featured, category_id) VALUES ('Automotive Mechanics', 'May & Simpson', '', 7449, 0, FALSE, FALSE, 1002);
+INSERT INTO `book` (title, author, description, price, rating, is_public, is_featured, category_id) VALUES ('The Aircraft Book', 'Jeff Walker', '', 17999, 0, FALSE, FALSE, 1002);
 INSERT INTO `book` (title, author, description, price, rating, is_public, is_featured, category_id) VALUES ('Engineering Electromagnetics', 'Nathan Ida', '', 3595, 0, TRUE, FALSE, 1002);
+INSERT INTO `book` (title, author, description, price, rating, is_public, is_featured, category_id) VALUES ('The Iliad', 'Homer', '', 699, 0, TRUE, FALSE, 1003);
+INSERT INTO `book` (title, author, description, price, rating, is_public, is_featured, category_id) VALUES ('The Brothers Karamazov', 'Fyodor Dostoyevski', '', 799, 0, TRUE, FALSE, 1003);
+INSERT INTO `book` (title, author, description, price, rating, is_public, is_featured, category_id) VALUES ('Little Dorrit', 'Charles Dickens', '', 599, 0, TRUE, FALSE, 1003);
+INSERT INTO `book` (title, author, description, price, rating, is_public, is_featured, category_id) VALUES ('Moby Dick', 'Herman Melville', '', 899, 0, FALSE, FALSE, 1003);
+INSERT INTO `book` (title, author, description, price, rating, is_public, is_featured, category_id) VALUES ('Hamlet', 'William Shakespeare', '', 1799, 0, TRUE, FALSE, 1003);
+INSERT INTO `book` (title, author, description, price, rating, is_public, is_featured, category_id) VALUES ('A History of World Religion', 'David Noss', '', 799, 0, TRUE, FALSE, 1004);
+INSERT INTO `book` (title, author, description, price, rating, is_public, is_featured, category_id) VALUES ('The Truth About Muhammad SM', 'Robert Spencer', '', 599, 0, TRUE, FALSE, 1004);
+INSERT INTO `book` (title, author, description, price, rating, is_public, is_featured, category_id) VALUES ('The Physics of God', 'Natalie Terlitski', '', 899, 0, FALSE, FALSE, 1004);
+INSERT INTO `book` (title, author, description, price, rating, is_public, is_featured, category_id) VALUES ('Hinduism', 'Mouni Roy', '', 799, 0, TRUE, FALSE, 1004);
+INSERT INTO `book` (title, author, description, price, rating, is_public, is_featured, category_id) VALUES ('Sachin A Billion Dreams', 'Sachin Tendulkar', '', 799, 0, TRUE, FALSE, 1005);
+INSERT INTO `book` (title, author, description, price, rating, is_public, is_featured, category_id) VALUES ('Virat Kohli The One man Army', 'Virat Kohli', '', 599, 0, TRUE, FALSE, 1005);
+INSERT INTO `book` (title, author, description, price, rating, is_public, is_featured, category_id) VALUES ('MS Dhoni The Untold Story', 'MS Dhoni', '', 1899, 0, FALSE, FALSE, 1005);
+INSERT INTO `book` (title, author, description, price, rating, is_public, is_featured, category_id) VALUES ('Faster Than Lightning', 'Jerrard Alvaro', '', 1799, 0, TRUE, FALSE, 1005);
+INSERT INTO `book` (title, author, description, price, rating, is_public, is_featured, category_id) VALUES ('Destinations of A Lifetime', 'National Geographic', '', 799, 0, TRUE, FALSE, 1006);
+INSERT INTO `book` (title, author, description, price, rating, is_public, is_featured, category_id) VALUES ('On The Road', 'Jack Kerouac', '', 2599, 0, TRUE, FALSE, 1006);
+INSERT INTO `book` (title, author, description, price, rating, is_public, is_featured, category_id) VALUES ('The Lost City of Z', 'Herman Melville', '', 899, 0, FALSE, FALSE, 1006);
+INSERT INTO `book` (title, author, description, price, rating, is_public, is_featured, category_id) VALUES ('Paris', 'Serge Ramelli', '', 1899, 0, TRUE, FALSE, 1006);
 
