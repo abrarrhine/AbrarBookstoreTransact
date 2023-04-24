@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface CustomerDao {
 
-    public long create(Connection connection,
+    public void create(Connection connection,
                        String customerName,
                        String address,
                        String phone,

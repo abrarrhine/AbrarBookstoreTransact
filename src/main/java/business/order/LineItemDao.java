@@ -4,11 +4,11 @@ import java.sql.Connection;
 import java.util.List;
 
 /**
- * Created by gregory on 4/7/17.
+ * Created by Abrar on 04/07/2023.
  */
 public interface LineItemDao {
 
-    public long create(Connection connection, long bookId, long orderId, int quantity);
+    public void create(Connection connection, long orderId, long bookId, int quantity);
 
     public List<LineItem> findByOrderId(long orderId);
 }

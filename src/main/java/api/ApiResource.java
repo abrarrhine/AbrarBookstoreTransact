@@ -173,12 +173,12 @@ public class ApiResource {
 
         try {
             long orderId = orderService.placeOrder(orderForm.getCustomerForm(), orderForm.getCart());
-            throw new ApiException.ValidationFailure("Transactions have not been implemented yet.");
-
-            // NOTE: MORE CODE PROVIDED NEXT PROJECT
-
+            if (orderId > 0) {
+                return orderService.getOrderDetails(orderId);
+            } else {
+                throw new ApiException.ValidationFailure("Unknown error occurred");
+            }
         } catch (ApiException e) {
-            // NOTE: all validation errors go through here
             throw e;
         } catch (Exception e) {
             throw new ApiException("order placement failed", e);
