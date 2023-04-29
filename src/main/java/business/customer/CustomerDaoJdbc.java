@@ -31,7 +31,7 @@ public class CustomerDaoJdbc implements CustomerDao {
                     "FROM customer WHERE customer_id = ?";
 
     @Override
-    public void create(Connection connection,
+    public long create(Connection connection,
                        String name,
                        String address,
                        String phone,
@@ -39,7 +39,7 @@ public class CustomerDaoJdbc implements CustomerDao {
                        String ccNumber,
                        Date ccExpDate) {
         try (PreparedStatement statement =
-                     connection.prepareStatement(CREATE_CUSTOMER_SQL)) {
+                     connection.prepareStatement(CREATE_CUSTOMER_SQL, Statement.RETURN_GENERATED_KEYS)) {
             statement.setString(1, name);
             statement.setString(2, address);
             statement.setString(3, phone);
@@ -50,14 +50,14 @@ public class CustomerDaoJdbc implements CustomerDao {
             if (affected != 1) {
                 throw new BookstoreUpdateDbException("Failed to insert a customer, affected row count = " + affected);
             }
-//            long customerId;
-//            ResultSet rs = statement.getGeneratedKeys();
-//            if (rs.next()) {
-//                customerId = rs.getLong(1);
-//            } else {
-//                throw new BookstoreUpdateDbException("Failed to retrieve customerId auto-generated key");
-//            }
-//            return customerId;
+            long customerId;
+            ResultSet rs = statement.getGeneratedKeys();
+            if (rs.next()) {
+                customerId = rs.getLong(1);
+            } else {
+                throw new BookstoreUpdateDbException("Failed to retrieve customerId auto-generated key");
+            }
+            return customerId;
         } catch (SQLException e) {
             throw new BookstoreUpdateDbException("Encountered problem creating a new customer ", e);
         }
