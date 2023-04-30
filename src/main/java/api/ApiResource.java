@@ -176,12 +176,12 @@ public class ApiResource {
             if (orderId > 0) {
                 return orderService.getOrderDetails(orderId);
             } else {
-                throw new ApiException.ValidationFailure("Unknown error occurred");
+                throw new ApiException.ValidationFailure("order placement failed");
             }
         } catch (ApiException e) {
             throw e;
         } catch (Exception e) {
-            throw new ApiException("order placement failed", e);
+            throw new ApiException("Unknown error", e);
         }
     }
 
